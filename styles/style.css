@@ -78,7 +78,8 @@ align-items: flex-start;
 
 .content__list-container {
   display: grid;
-  height: 298px;
+  position: relative;
+  height: 293px;
   overflow-y: auto;
   gap: 30px;
 }
@@ -122,6 +123,7 @@ font-style: normal;
 font-size: 75px;
 line-height: 94%;
 text-transform: uppercase;
+letter-spacing: 0%;
 }
 
 .content__accent{
@@ -129,6 +131,7 @@ color: rgba(84, 80, 80, 1);
 }
 
 .result__video-container {
+  position: relative;
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
@@ -149,6 +152,7 @@ white-space: nowrap;
 overflow: hidden;        
 text-overflow: ellipsis;
 padding-bottom: 6px;
+text-transform: uppercase;
 }
 
 .content__video-card-description{
@@ -168,12 +172,17 @@ overflow: hidden;
   display: block;
   text-decoration: none;
   color:rgba(255, 255, 255, 1);
-
 }
 
 .content__card-link_current {
 background-color: rgba(84, 80, 80, 1); 
 }
+
+.content__list-item{
+padding-left: 3px;
+padding-right: 3px;
+}
+
 .content__list-item:active {
 background-color: rgba(84, 80, 80, 1);
 background-image: none;
@@ -181,11 +190,18 @@ background-image: none;
 
 .content__list-item:hover {
 text-decoration: underline;
-text-decoration-thickness: 2px;
-text-underline-offset: 5px;
+text-decoration-thickness: 1px;
+text-underline-offset: 6px;
 }
 
+.content__list-item:focus {
+outline: none;
+}
 
+.content__list-item:focus-visible {
+outline: 1px solid ;
+color:rgba(255, 255, 255, 1);
+}
 
 .visually-hidden {
   position: absolute;
@@ -215,6 +231,7 @@ gap: 5px;
   width: fit-content;
   gap: 5px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .search-form__textfield{
@@ -237,7 +254,7 @@ color:rgb(255 255 255 / 0.7);
 
 .search-form__textfield:focus,
 .search-form__textfield:active {
-  outline: none;
+  outline: none !important;
 }
 
 
@@ -296,6 +313,7 @@ outline-offset: 2px;
   font-weight: 700;
   font-size: 18px;
   color: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
 
 .button:hover {
